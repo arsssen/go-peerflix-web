@@ -1,0 +1,11 @@
+
+[[constraint]]
+  name = "github.com/anacrolix/torrent"
+  revision = "fe9839f81886c29a77fb1203017c5c428808b882"
+
+[[constraint]]
+  name = "github.com/dustin/go-humanize"
+  revision = "bb3d318650d48840a39aa21a027c6630e198e626"
+[[constraint]]
+  branch = "master"
+  name = "astuart.co/goq"

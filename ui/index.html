@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go-PeerFlix-Web</title>
+    <script src="/jquery.js"></script>
+    <script src="/app.js"></script>
+
+    <link rel="stylesheet" href="/pure.css">
+    <style>
+        body {
+            background-color: #eeeeee
+        }
+
+        #omxcontrols,
+        #players,
+        #stopdownload {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="content">
+            <button class="pure-button" id=stopdownload>Stop Download</button>
+            <div id=status></div>
+            <div id="players">
+                <button class="pure-button" id=playinomx>Play active torrent in OMX</button>
+                or
+                <label class="label-inline" for=playername>play in:</label>
+                <input id=playername placeholder="vlc, etc.." size="8">
+                <button class="pure-button" id=playinplayer>Play</button>
+                <div id=streamurl></div>
+            </div>
+
+            <form name=download class="pure-form">
+                <fieldset>
+                    <input id=torrent name=torrent placeholder="torrent url or magnet">
+                    <button class="pure-button" id=download>Download</button>
+                </fieldset>
+            </form>
+
+            <form name=search class="pure-form">
+                <fieldset>
+                    <input name=search placeholder="movie name">
+                    <button class="pure-button" id=search>search</button>
+                </fieldset>
+            </form>
+
+            <fieldset id=omxcontrols>
+                <legend>OMX player controls</legend>
+                <button class="pure-button" id=omxbackward> &lt; </button>
+                <button class="pure-button" id=omxquit>Stop</button>
+                <button class="pure-button" id=omxplaypause>Play/Pause</button>
+                <button class="pure-button" id=omxforward> &gt; </button>
+                <button class="pure-button" id=omxinfo>Info</button>
+                <button class="pure-button" id=omxsubs>Subtitles</button>
+                <button class="pure-button" id=omxsubsn>Next subtitle</button>
+                <div id=omxstatus></div>
+            </fieldset>
+
+            <div id=results></div>
+        </div>
+    </div>
+</body>
+
+</html>
